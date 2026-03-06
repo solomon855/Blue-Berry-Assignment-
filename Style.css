@@ -1,0 +1,470 @@
+/* Overall styling*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-header {
+    background-color: #053783; /*used deep blue to highlight header */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;         
+    justify-content: space-between; /* Space between logo, name and links */
+
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between logo and name */
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.school-name {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+  
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+/* Run vertical on small gadgets */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+.hero {
+    background: linear-gradient(rgba(6, 34, 65, 0.486), rgba(8, 39, 68, 0.377)), 
+                url('background pic.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 800px; 
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;
+    color: white;
+    
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.welcome-msg {
+    font-size: 60px; 
+    font-weight: 800;
+    margin-bottom: 20px; /* Space between title and nurturiing */
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.slogan {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 30px; /* Space before the button */
+    color: #e0e0e0;
+}
+
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #ffcc00; 
+    color: #1a4a8e;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05); /* Slight "pop" effect on hover */
+}
+
+@media (max-width: 600px) {
+    .welcome-msg {
+        font-size: 40px;
+    }
+    .slogan {
+        font-size: 30px;
+    }
+}
+
+.about-section {
+    padding: 60px 10%; /* Top/Bottom padding and Left/Right margin-like spacing */
+    background-color: #e0dede;
+    color: #3d3d3d;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the entire section content */
+}
+
+.section-title {
+    font-size: 60px;
+    color: #043f6e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-description {
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 50px; /* Space before the mission/vision boxes */
+    font-size: 17px;
+}
+
+.mission-vision-container {
+    display: flex;
+    gap: 40px; /* Space between the two boxes */
+    justify-content: center;
+}
+
+.info-box {
+    flex: 1; /* Makes boxes equal width */
+    background: white;
+    
+    padding: 30px;           /* spacing inside */
+    border: 2px solid #7e7e7d; /* Defined Border */
+    border-radius: 12px;     /* Rounded corners */
+}
+
+.info-box:hover {
+    transform: translateY(-10px); /* Subtle lift on hover */
+}
+
+.info-box h3 {
+    color: #3a3a3a;
+    margin-bottom: 15px;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.info-box p {
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .mission-vision-container {
+        flex-direction: column; /* not changinfg on small devices */
+    }
+}
+
+
+.academics-section {
+    padding: 80px 5%;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.academics-intro {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    color: #666;
+    line-height: 1.6;
+}
+
+.class-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px; /* Space between cards */
+    flex-wrap: wrap; 
+}
+
+.class-card {
+    flex: 1; /* Makes all cards equal width */
+    min-width: 280px; /* Prevents cards from getting too skinny */
+    max-width: 350px;
+    
+   
+    padding: 40px 25px;
+    background: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.class-card:hover {
+    border-color: #1a4a8e;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(26, 74, 142, 0.15);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.class-card h3 {
+    color: #1a4a8e;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.class-card p {
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Push the age tag to the bottom */
+}
+
+.age-tag {
+    background-color: #ffcc00;
+    color: #1a4a8e;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .class-cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.gallery-section {
+    padding: 80px 5%;
+    background-color: #f4f7f6;
+    text-align: center;
+}
+
+.gallery-intro {
+    margin-bottom: 40px;
+    color: #555;
+    font-style: italic;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;        /* Allows images to wrap to the next row */
+    justify-content: center; 
+    gap: 0;                 
+}
+
+.gallery-item {
+    flex: 1 1 300px;        
+    max-width: 400px;
+    margin: 15px;           /* spacing between all images */
+    position: relative;     /* Needed for the overlay text */
+    overflow: hidden;       /* Keeps zoomed images inside the box */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;      /* Prevents images from stretching */
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(26, 74, 142, 0.8); /* School Blue with transparency */
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    transform: translateY(100%); /* Hides text by default */
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0); /* Shows text on hover */
+}
+
+@media (max-width: 600px) {
+    .gallery-item {
+        margin: 10px 0; /* Vertical margin only on small screens */
+        flex: 1 1 100%;
+    }
+}
+
+.contact-section {
+    padding: 80px 10%;
+    background-color: #f9fbfd;
+}
+
+.contact-grid {
+    display: flex;
+    gap: 50px; /* Spacing between info and form */
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-info h2 {
+    color: #1a4a8e;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.details p {
+    margin: 15px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.contact-form-container {
+    flex: 1.5;
+    background: white;
+    padding: 40px;           
+    border: 1px solid #ddd;  
+    border-radius: 12px;     
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 25px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px; 
+    font-weight: 600;
+    color: #1a4a8e;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px 15px;      
+    border: 2px solid #eee;  
+    border-radius: 6px;      /* Rounded input edges */
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: all 0.3s ease;
+    outline: none;           /* Removes default browser outline */
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    border-color: #1a4a8e;   
+    background-color: #fff;
+}
+
+.send-btn {
+    width: 100%;
+    padding: 15px;           
+    background-color: #1a4a8e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #ffcc00; 
+    color: #1a4a8e;
+}
+
+@media (max-width: 800px) {
+    .contact-grid {
+        flex-direction: column;
+    }
+}
+
+.main-footer {
+    background-color: #1a4a8e; 
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-container div {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+
+.footer-container h4 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer-bottom {
+    background-color: #123466; /* a bit main footer */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
